@@ -16,7 +16,7 @@
     "express": "^4.16.4",
     "jsonwebtoken": "^8.5.1",
     "koa-morgan": "^1.0.1",
-    "mongodb": "^3.2.7"
+    "mongodb": "^2.2.33"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
