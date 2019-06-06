@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
-const app  = express()
 const bodyParser = require('body-parser')
+const app  = express()
 
 const assert = require('assert');
 const ip =[
