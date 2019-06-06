@@ -1,11 +1,28 @@
 const MongoClient = require('mongodb').MongoClient;
+const app  = express()
+const bodyParser = require('body-parser')
+
 const assert = require('assert');
 const ip =[
     "158.108.207.134",
     "158.108.207.207",
     "158.108.207.183"
 ]
- 
+
+app.use(bodyParser.urlencoded({extended : false})); // false ใช้อัลกอในการ map json ธรรมดา ,true = high
+app.use(bodyParser.json());
+app.use(compression());
+
+
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Orgin, X-Requested-With, Content-Type, Accept,Authorization,authorization,content-type');
+    if (req.method === 'OPTIONS') {
+        res.header('Access-Control-Allow-Methods', 'PUT,POST,PATCH,DELETE,GET');
+        return res.status(200).json({});
+    }
+    next(); // ไปต่อ
+})
 // Connection URL
 const url = 'mongodb://localhost:27017/databaseIOT';
  
