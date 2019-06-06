@@ -67,7 +67,7 @@ app.post('/insert', (req, res) =>{
         });
 
     });
-    
+    res.status(200)
 })
 
 module.exports = app
