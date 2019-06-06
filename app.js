@@ -25,7 +25,7 @@ app.use((req, res, next) => {
     next(); // ไปต่อ
 })
 // Connection URL
-const url = 'mongodb://localhost:27017/databaseIOT';
+const url = 'mongodb://127.0.0.1:27017/databaseIOT';
  
 // Database Name
 const dbName = 'myproject';
