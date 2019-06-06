@@ -13,7 +13,6 @@ const ip =[
 
 app.use(bodyParser.urlencoded({extended : false})); // false ใช้อัลกอในการ map json ธรรมดา ,true = high
 app.use(bodyParser.json());
-app.use(compression());
 
 
 app.use((req, res, next) => {
